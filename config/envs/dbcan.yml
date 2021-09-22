@@ -1,0 +1,6 @@
+name: dbcan
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - run-dbcan

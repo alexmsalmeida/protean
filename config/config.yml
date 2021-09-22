@@ -1,0 +1,19 @@
+# Input protein fasta file (.faa)
+
+input_file: "/hps/nobackup2/production/metagenomics/aalmeida/project_latinbiota/protein_functions/combined/latinbiota_clusters.faa"
+
+# Directory containing eggNOG, dbCAN2 and KOFam DBs
+
+db_dir: "/hps/nobackup2/production/metagenomics/aalmeida/scripts/EMBL-EBI/snakemake_wfs/protean/protean_db"
+
+# Output directory
+
+output_dir: "/hps/nobackup2/production/metagenomics/aalmeida/project_latinbiota/protein_functions/combined/annotations"
+
+# Number of files to split input proteins
+
+nsplits: 2000
+
+# Number of cores
+
+ncores: 4

@@ -1,0 +1,7 @@
+name: biopython
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - biopython
+  - hmmer

@@ -1,0 +1,27 @@
+{
+ "__default__": {
+  "jobname": "{rule}.{wildcards}",
+  "cores": 1,
+  "mem": 8000,
+  "project": "default",
+  "outfile": "{OUTPUT_DIR}/logs/{rule}.log"
+ },
+ "split_fasta": {
+  "mem": 20000,
+ },
+ "eggnog": {
+  "cores": "{resources.ncores}",
+  "mem": 20000,
+  "outfile": "{OUTPUT_DIR}/logs/eggnog/split{wildcards.n}.log"
+ },
+ "cazy": {
+  "cores": "{resources.ncores}",
+  "mem": 20000,
+  "outfile": "{OUTPUT_DIR}/logs/cazy/split{wildcards.n}.log"
+ },
+ "kofam": {
+  "cores": "{resources.ncores}",
+  "mem": 5000,
+  "outfile": "{OUTPUT_DIR}/logs/kofam/split{wildcards.n}.log"
+ }
+}
