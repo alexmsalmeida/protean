@@ -20,7 +20,7 @@ tar -xzvf protean_db.tar.gz
 ## How to run
 
 1. Edit the configuration file [`config/config.yml`](config/config.yml).
-    - `input_file: Path to input protein FASTA file (.faa).
+    - `input_file`: Path to input protein FASTA file (.faa).
     - `output_dir`: Directory to save output results.
     - `db_dir`: Location of the database directory.
     - `nsplits`: Number of parallel splits to analyse (must be lower than the number of proteins in `input_file`)
