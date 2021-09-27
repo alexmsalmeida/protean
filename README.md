@@ -1,6 +1,6 @@
 # Functional annotation of protein sequences
 
-This is a Snakemake workflow for functional annotation of a protein FASTA using [eggNOG-mapper](https://github.com/eggnogdb/eggnog-mapper/wiki), [dbCAN2](https://bcb.unl.edu/dbCAN2/) and [KOFams](https://www.genome.jp/tools/kofamkoala/). It has been optimized for annotation of a large collection of proteins (>1 million). For characterizing functional pathways at a genome level I suggest having a look at [DRAM](https://github.com/shafferm/DRAM).
+This is a Snakemake workflow for functional annotation of a protein FASTA using [eggNOG-mapper](https://github.com/eggnogdb/eggnog-mapper/wiki), [dbCAN2](https://bcb.unl.edu/dbCAN2/) and [KOFams](https://www.genome.jp/tools/kofamkoala/). It has been optimized for annotation of large collections of proteins (>1 million). For characterizing functional pathways at a genome level I suggest having a look at [DRAM](https://github.com/shafferm/DRAM).
 
 ## Installation
 
