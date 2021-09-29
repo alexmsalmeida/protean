@@ -55,7 +55,8 @@ rule cazy:
     input:
         OUTPUT_DIR+"/splits/proteins_split{n}.faa"
     output:
-        OUTPUT_DIR+"/cazy/split{n}/overview.txt"
+        raw = OUTPUT_DIR+"/cazy/split{n}/overview.txt",
+        parsed = OUTPUT_DIR+"/cazy/split{n}/cazy-parsed.tsv"
     params:
         out = OUTPUT_DIR+"/cazy/split{n}",
         db = db_dir+"/cazy"
@@ -66,6 +67,7 @@ rule cazy:
     shell:
         """
         run_dbcan.py --dia_cpu {resources.ncores} --hmm_cpu {resources.ncores} --tf_cpu {resources.ncores} --hotpep_cpu {resources.ncores} {input} protein --db_dir {params.db} --out_dir {params.out}
+        python scripts/dbcan_simplify.py {output.raw} > {output.parsed}
         """
 
 rule kofam:
@@ -86,7 +88,7 @@ rule kofam:
 rule summarize:
     input:
         eggnog = expand(OUTPUT_DIR+"/eggnog/split{n}/eggnog.emapper.annotations", n=list(range(1, splits+1))),
-        cazy = expand(OUTPUT_DIR+"/cazy/split{n}/overview.txt", n=list(range(1, splits+1))),
+        cazy = expand(OUTPUT_DIR+"/cazy/split{n}/cazy-parsed.tsv", n=list(range(1, splits+1))),
         kofam = expand(OUTPUT_DIR+"/kofam/split{n}/kofam-parsed.tsv", n=list(range(1, splits+1)))
     output:
         eggnog = OUTPUT_DIR+"/summary/eggNOG_annotations.tsv",
@@ -95,6 +97,6 @@ rule summarize:
     shell:
         """
         grep -v '^#' {input.eggnog} | cut -f2 -d ':' > {output.eggnog}
-        grep -wv Hotpep {input.cazy} | cut -f2 -d ':' > {output.cazy}
+        cat {input.cazy} > {output.cazy}
         cat {input.kofam} > {output.kofam}
         """
