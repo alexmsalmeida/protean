@@ -13,8 +13,8 @@ git clone https://github.com/alexmsalmeida/protean.git
 
 3. Download main database containing eggNOG, CAZy and KOFam annotations
 ```
-wget http://ftp.ebi.ac.uk/pub/databases/metagenomics/genome_sets/protean_db.tar.gz
-tar -xzvf protean_db.tar.gz
+wget http://ftp.ebi.ac.uk/pub/databases/metagenomics/genome_sets/protein_dbs.tar.gz
+tar -xzvf protein_dbs.tar.gz
 ```
 
 ## How to run
