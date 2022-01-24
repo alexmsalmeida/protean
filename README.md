@@ -1,6 +1,6 @@
 # Functional annotation of protein sequences
 
-This is a Snakemake workflow for functional annotation of a protein FASTA using [eggNOG-mapper](https://github.com/eggnogdb/eggnog-mapper/wiki), [dbCAN2](https://bcb.unl.edu/dbCAN2/) and [KOFams](https://www.genome.jp/tools/kofamkoala/). It has been optimized for annotating large collections of proteins (>1 million). For characterizing functional pathways at a genome level I suggest having a look at [DRAM](https://github.com/shafferm/DRAM).
+This is a Snakemake workflow for functional annotation of a protein FASTA using [eggNOG-mapper](https://github.com/eggnogdb/eggnog-mapper/wiki), [dbCAN2](https://bcb.unl.edu/dbCAN2/) and [KOFams](https://www.genome.jp/tools/kofamkoala/). It has been optimized for annotating large collections of proteins (>1 million). For characterizing functional pathways at a genome level there is a separate repo in https://github.com/alexmsalmeida/genome-funcs.
 
 ## Installation
 
@@ -13,8 +13,8 @@ git clone https://github.com/alexmsalmeida/protean.git
 
 3. Download main database containing eggNOG, CAZy and KOFam annotations
 ```
-wget http://ftp.ebi.ac.uk/pub/databases/metagenomics/genome_sets/protean_db.tar.gz
-tar -xzvf protean_db.tar.gz
+wget http://ftp.ebi.ac.uk/pub/databases/metagenomics/genome_sets/protein_dbs.tar.gz
+tar -xzvf protein_dbs.tar.gz
 ```
 
 ## How to run
