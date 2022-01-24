@@ -49,7 +49,10 @@ rule eggnog:
     resources:
         ncores = ncores
     shell:
-        "emapper.py --cpu {resources.ncores} -i {input} -m diamond -o eggnog --output_dir {params.out} --temp_dir {params.out} --data_dir {params.db}"
+        """
+        rm -rf {params.out}/*tmp*
+        emapper.py --cpu {resources.ncores} -i {input} -m diamond -o eggnog --output_dir {params.out} --temp_dir {params.out} --data_dir {params.db} --override
+        """
 
 rule cazy:
     input:
