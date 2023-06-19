@@ -3,7 +3,9 @@
   "jobname": "{rule}.{wildcards}",
   "cores": 1,
   "mem": 8000,
-  "project": "default",
+  "time": "12:00:00",
+  "queue": "icelake-himem",
+  "project": "ALMEIDA-SL3-CPU",
   "outfile": "{OUTPUT_DIR}/logs/{rule}.log"
  },
  "split_fasta": {

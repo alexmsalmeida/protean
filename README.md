@@ -30,9 +30,9 @@ tar -xzvf protein_dbs.tar.gz
 ```
 snakemake --use-conda -k -j 4
 ```
-2. (option 2) Run the pipeline on a cluster (e.g., LSF)
+2. (option 2) Run the pipeline on a cluster (e.g., SLURM)
 ```
-snakemake --use-conda -k -j 100 --profile config/lsf --latency-wait 120
+snakemake --use-conda -k -j 100 --profile config/slurm --latency-wait 120
 ```
 
 3. View the results in `{output_dir}/summary/`.
