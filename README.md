@@ -1,6 +1,6 @@
 # Protean - Protein annotation pipeline
 
-This is a Snakemake workflow for functional annotation of a protein FASTA using [eggNOG-mapper](https://github.com/eggnogdb/eggnog-mapper/wiki), [dbCAN2](https://bcb.unl.edu/dbCAN2/) and [KOFams](https://www.genome.jp/tools/kofamkoala/). It has been optimized for annotating large collections of proteins (>1 million). For characterizing functional pathways at a genome level there is a separate repo in https://github.com/alexmsalmeida/fungenome.
+This is a Snakemake workflow for functional annotation of a protein FASTA using [eggNOG-mapper](https://github.com/eggnogdb/eggnog-mapper/wiki), [dbCAN2](https://bcb.unl.edu/dbCAN2/) and [KOFams](https://www.genome.jp/tools/kofamkoala/). It has been optimized for annotating large collections of proteins (>1 million). For characterizing functional pathways at a genome level there is a separate repo in https://github.com/alexmsalmeida/genofan.
 
 ## Installation
 
